@@ -1,0 +1,20 @@
+clear;
+clc;
+n = 200;
+p = 100;
+s = floor(sqrt(p) / 2);
+betaStar = zeros(p, 1);
+betaStar(1:2*s) = -2;
+betaStar(51:50+2*s) = 1;
+betaStar = betaStar / norm(betaStar);
+
+n = 100;
+X = normrnd(0, 1, n, p);
+epsilon = normrnd(0, 0.5, n, 1);
+y = X * betaStar + epsilon;        
+y = y - mean(y);    
+W = normrnd(0, 0.5, n, p);
+Z = X + W;
+ZImp = Z(:, impFeatures);
+beta = pinv(ZImp'*ZImp)*ZImp'*y;
+betaAll = pinv(Z'*Z)*Z'*y;

@@ -1,0 +1,11 @@
+expConf.directory   = 'debug';
+expConf.dataDir     = 'data';
+expConf.dataFile    = 'calibData.mat';
+expConf.avgRate     = 32;
+expConf.isSemiSup   = 1;
+expConf.numState    = 2;
+expConf.maxIt       = 10;
+expConf.histLength  = 10;
+expConf.numOfPoints = 2; 
+expConf.start       = 450;
+expConf.stop        = 669;

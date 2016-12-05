@@ -1,0 +1,12 @@
+#!/bin/bash -l
+
+#PBS -l walltime=00:30:00,pmem=3750mb,nodes=25:ppn=16
+#PBS -m abe
+#PBS -N ff35
+#PBS -M amir.asiaeetaheri@gmail.com
+#PBS -o output35.txt
+#PBS -e error35.txt
+
+cd ./synthetic/final
+module load python-epd
+mpirun -np 400 python fcode35.py

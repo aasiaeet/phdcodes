@@ -1,0 +1,1 @@
+Run run.py as a main program (windows: double click).
